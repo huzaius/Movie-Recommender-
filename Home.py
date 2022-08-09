@@ -2,7 +2,7 @@
 
 # Streamlit dependencies
 import email
-#from turtle import onclick, window_width
+from turtle import onclick, window_width
 from requests import options
 import streamlit as st
 from streamlit_option_menu import option_menu
@@ -81,20 +81,13 @@ st.markdown("""
 # Data Loading
 title_list = load_movie_titles('resources/data/movies.csv')
 
-
- 
-
-#st.sidebar.image('resources/imgs/Screen_lot.jpg',use_column_width=True)
 # App declaration
 def main():
 
-    # DO NOT REMOVE the 'Recommender System' option below, however,
-    # you are welcome to add more options to enrich your app.
+   
     # page_options = ["Home","EDA","Movie Filter","Solution Overview","Feedback",'Documentation','About']
     
-    # # -------------------------------------------------------------------
-    # # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
-    # # -------------------------------------------------------------------
+ 
     
     # page_selection = option_menu("Recommender Engine", page_options,
     #                             icons=["house","clipboard-data","funnel-fill","lightbulb","chat-square-text","book","person-lines-fill"],
@@ -108,6 +101,7 @@ def main():
     #                             "nav-link-selected": {"background-color": "#02ab21"},
     #                             })
     # if page_selection == "Home":
+        
         # Header contents
         st.write('# Movie Recommender Engine')
         st.image('resources/imgs/Image_header.png',use_column_width=True)
