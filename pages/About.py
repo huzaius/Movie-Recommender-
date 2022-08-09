@@ -57,8 +57,8 @@ st.write("Before now, it was near impossible to process these large swaths of da
 #st.write('Before now, it was near impossible to process these large swaths of data in order to reveal these insights. With the developments in the field of data science and through the expertise which we seek to express, we will show how data can be processed to not only reveal the insight hidden in them but also to present the discoveries made in the process in a form that is digestible by non-technical audiences. Our team is made up of 5  professionals who excel in the fields of Business Management, marketing and promotions, technical data science, IT communications, and Administration. Please refer to this link to access the full profiles of all team members.')
 st.markdown(f'''Having been given a sourced and clean data set, (the MovieLens dataset) which has been pre-enriched with additional data, and resampled for fair evaluation purposes, We have a task to use this raw data to build a Recommendation system algorithm (Screen lot) based on content or collaborative filtering, capable of accurately predicting how a user will rate a movie they have not yet viewed, based on their historical preferences. The idea of this algorithm is to predict the movies that would be enjoyed by a viewer based on their reactions to the movies that they have already watched. For more information on how Screenlot works and the technical details of the App, please check out the ***documentation*** page.''')
 
-from PIL import Image
-huzaifa_img = Image.open('resources/imgs/huzaius.png')
-st.image(huzaifa_img,caption='Huzaifa Abu - Technical Lead')
+
+
+st.image('resources/imgs/huzaius.png',caption='Huzaifa Abu')
 with st.expander("View Profile"):
     st.write('Huzaifa Abu is  the Tech lead at Data port Inc. He is skilled in Server and Database Administration with strong skills in python,sql (T-SQL,Oracle etc.), Visualizations like PowerBI and Tableau and design and implementation of ML models. I enjoy swimming , playing football and making friends at my leasure time.')

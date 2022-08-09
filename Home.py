@@ -2,7 +2,7 @@
 
 # Streamlit dependencies
 import email
-from turtle import onclick, window_width
+#from turtle import onclick, window_width
 from requests import options
 import streamlit as st
 from streamlit_option_menu import option_menu
