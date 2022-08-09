@@ -1,33 +1,8 @@
-"""
 
-    Streamlit webserver-based Recommender Engine.
 
-    Author: Explore Data Science Academy.
-
-    Note:
-    ---------------------------------------------------------------------
-    Please follow the instructions provided within the README.md file
-    located within the root of this repository for guidance on how to use
-    this script correctly.
-
-    NB: !! Do not remove/modify the code delimited by dashes !!
-
-    This application is intended to be partly marked in an automated manner.
-    Altering delimited code may result in a mark of 0.
-    ---------------------------------------------------------------------
-
-    Description: This file is used to launch a minimal streamlit web
-	application. You are expected to extend certain aspects of this script
-    and its dependencies as part of your predict project.
-
-	For further help with the Streamlit framework, see:
-
-	https://docs.streamlit.io/en/latest/
-
-"""
 # Streamlit dependencies
 import email
-from turtle import onclick, window_width
+#from turtle import onclick, window_width
 from requests import options
 import streamlit as st
 from streamlit_option_menu import option_menu
@@ -45,15 +20,26 @@ from recommenders.collaborative_based import collab_model
 from recommenders.content_based import content_model
 
 #various functions 
-from eda.mymodules import *
+
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#Page Aestheticization
 
-st.set_page_config(initial_sidebar_state='collapsed',
+st.set_page_config(page_title="Recommender Engine",
+                    initial_sidebar_state='collapsed',
                     layout='centered',
                     menu_items=None)
+st.markdown("""
+<style>
+ .css-1k0ckh2{
+        visibility:hidden
+    }
+
+</style>
+""", unsafe_allow_html=True)
+
 
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 # <a class="navbar-brand" href="#">Navbar</a>
@@ -89,16 +75,7 @@ st.markdown("""
   </div>
 </nav>
 """, unsafe_allow_html=True)
-st.markdown("""
 
-<style>
- .css-1k0ckh2{
-        visibility:hidden
-    }
-
-</style>
-
-""", unsafe_allow_html=True)
 
 
 # Data Loading
@@ -113,27 +90,26 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Home","EDA","Movie Filter","Solution Overview","Feedback",'Documentation','About']
+    # page_options = ["Home","EDA","Movie Filter","Solution Overview","Feedback",'Documentation','About']
     
-    # -------------------------------------------------------------------
-    # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
-    # -------------------------------------------------------------------
+    # # -------------------------------------------------------------------
+    # # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
+    # # -------------------------------------------------------------------
     
-    page_selection = option_menu("Recommender Engine", page_options,
-                                icons=["house","clipboard-data","funnel-fill","lightbulb","chat-square-text","book","person-lines-fill"],
-                                orientation="horizontal",
-                                default_index=0,
-                                menu_icon="camera-reels-fill",
-                                styles={
-                                "container": {"padding": "5!important", "background-color": "#fafafa"},
-                                "icon": {"color": "orange", "font-size": "25px"}, 
-                                "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-                                "nav-link-selected": {"background-color": "#02ab21"},
-                                })
-    if page_selection == "Home":
+    # page_selection = option_menu("Recommender Engine", page_options,
+    #                             icons=["house","clipboard-data","funnel-fill","lightbulb","chat-square-text","book","person-lines-fill"],
+    #                             orientation="horizontal",
+    #                             default_index=0,
+    #                             menu_icon="camera-reels-fill",
+    #                             styles={
+    #                             "container": {"padding": "5!important", "background-color": "#fafafa"},
+    #                             "icon": {"color": "orange", "font-size": "25px"}, 
+    #                             "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+    #                             "nav-link-selected": {"background-color": "#02ab21"},
+    #                             })
+    # if page_selection == "Home":
         # Header contents
         st.write('# Movie Recommender Engine')
-        st.write('### EXPLORE Data Science Academy Unsupervised Predict')
         st.image('resources/imgs/Image_header.png',use_column_width=True)
         # Recommender System algorithm selection
         sys = st.radio("Select an algorithm",
@@ -175,47 +151,6 @@ def main():
                     st.error("Oops! Looks like this algorithm does't work.\
                               We'll need to fix it!")
 
-
-    # -------------------------------------------------------------------
-
-    # ------------- SAFE FOR ALTERING/EXTENSION -------------------
-
-    if page_selection == "Movie Filter":
-        st.markdown("""
-        <a href="Filter" target='_self'>filter</a> 
-       
-        
-        """,unsafe_allow_html=True)
-
-    if page_selection == "EDA":
-            pass
-
-
-
-
-
-    if page_selection == "Solution Overview":
-        pass
-
-
-    # You may want to add more sections here for aspects such as an EDA,
-    # or to provide your business pitch.
-
-
-
-    if page_selection == "Feedback":
-        pass
-       
-
-
-    if page_selection == "Documentation":
-       
-        pass
-        
-    if page_selection == "About":    
-        pass
-            
-            
 
                 
 

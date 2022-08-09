@@ -2,7 +2,7 @@
 
 ## 1) Overview
 
-![Movie_Recommendations](resources/imgs/Image_header.png)
+![Movie_Recommendations](resources/imgs/rec_eng.png)
 
 This repository forms the basis of an **Unsupervised learning Model** . It hosts code that deploy a  recommender engine based upon the [Streamlit](https://www.streamlit.io/) web application framework.
 
