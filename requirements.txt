@@ -7,5 +7,6 @@ matplotlib
 seaborn
 scikit-learn
 sklearn
+turtle
 PythonTurtle
 tkinter
