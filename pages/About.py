@@ -59,6 +59,6 @@ st.markdown(f'''Having been given a sourced and clean data set, (the MovieLens d
 
 
 
-st.image('resources/imgs/huzaius.png',caption='Huzaifa Abu')
+st.image('resources/imgs/Huzaius.png',caption='Huzaifa Abu')
 with st.expander("View Profile"):
     st.write('Huzaifa Abu is  the Tech lead at Data port Inc. He is skilled in Server and Database Administration with strong skills in python,sql (T-SQL,Oracle etc.), Visualizations like PowerBI and Tableau and design and implementation of ML models. I enjoy swimming , playing football and making friends at my leasure time.')
